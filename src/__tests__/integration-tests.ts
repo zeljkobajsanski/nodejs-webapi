@@ -30,7 +30,13 @@ describe("Integration tests", () => {
    });
 
    it("add user", () => {
-       let user = {username: 'zeksdev', firstName: 'Zeljko', lastName: 'Bajsanski', email: 'zeljko.bajsanski@gmail.com'};
+       let user = {
+           username: 'zeksdev',
+           firstName: 'Zeljko',
+           lastName: 'Bajsanski',
+           email: 'zeljko.bajsanski@gmail.com'
+       };
+
        return request(httpServer).post("/users").send(user).expect(200).then(res => {
            let savedUser: User = <User>res.body;
            expect(savedUser).toBeDefined();
@@ -51,9 +57,10 @@ describe("Integration tests", () => {
            });
    });
 
-   afterAll(async () => {
+   afterAll(async (done) => {
        const connection = await DbProvider.getConnection();
        await connection.getCustomRepository(UsersRepository).clear();
        server.stop();
+       done();
    });
 });

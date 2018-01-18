@@ -24,6 +24,6 @@ export class Server {
     }
 
     stop() {
-        this.httpServer.close(() => 'Server is shutdown');
+        this.httpServer.close(() => console.log('Server is shutdown'));
     }
 }
