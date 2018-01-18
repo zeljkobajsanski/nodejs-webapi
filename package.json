@@ -3,7 +3,10 @@
   "version": "0.0.1",
   "scripts": {
     "watch": "nodemon --exec ts-node src/main.ts",
-    "test": "jest"
+    "unit-tests": "jest unit-tests",
+    "integration-tests": "jest integration-tests",
+    "build": "rimraf dist && tsc",
+    "start": "npm run build && node dist/main.js"
   },
   "dependencies": {
     "@types/express": "^4.11.0",
@@ -19,7 +22,10 @@
     "typescript": "^2.6.2"
   },
   "devDependencies": {
+    "@types/supertest": "^2.0.4",
     "nodemon": "^1.14.11",
+    "rimraf": "^2.6.2",
+    "supertest": "^3.0.0",
     "ts-node": "^4.1.0"
   },
   "jest": {

@@ -28,4 +28,8 @@ export class DbProvider {
         }
         return DbProvider.connection;
     }
+
+    static getConnection() {
+        return DbProvider.connection;
+    }
 }

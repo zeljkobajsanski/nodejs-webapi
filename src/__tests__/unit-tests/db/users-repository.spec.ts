@@ -1,7 +1,7 @@
-import {DbProvider} from "../../db/db-provider";
+import {DbProvider} from "../../../db/db-provider";
 import {getCustomRepository} from "typeorm";
-import {UsersRepository} from "../../db/users-repository";
-import {User} from "../../entities/user";
+import {UsersRepository} from "../../../db/users-repository";
+import {User} from "../../../entities/user";
 
 describe("UsersRepository", () => {
 

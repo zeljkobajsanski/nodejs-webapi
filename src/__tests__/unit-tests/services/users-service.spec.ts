@@ -1,7 +1,7 @@
 import "reflect-metadata";
-import {UsersRepository} from "../../db/users-repository";
-import {UsersService} from "../../services/users-service";
-import {User} from "../../entities/user";
+import {UsersRepository} from "../../../db/users-repository";
+import {UsersService} from "../../../services/users-service";
+import {User} from "../../../entities/user";
 
 describe("UsersService", () => {
     const repository = new UsersRepository();
