@@ -8,15 +8,28 @@ NodeJS web api exmaple using following libraries:
 
 ## Getting Started
 
-  Install npm modules
-  ```
+Install npm modules
+```
 npm install
+```
+
+Run server (build and run)
+```
+npm start
   ```
-  Run tests
+  
+  Build
   ```
-  npm run tests
+  npm run build
   ```
-  Run server
-  ```
-  npm start
-  ```
+  
+  ## Tests
+Run unit tests
+```
+npm run unit-tests
+```
+  Run integration tests
+```
+npm run integration-tests
+```
+  
